@@ -1,12 +1,21 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Button from "react-bootstrap/Button";
+import { useState } from "react";
+import FormGroup from "./components/FormGroup";
+import { List } from "./components/List";
 
 function App() {
+  const [producto, setproducto] = useState("");
+  const [list, setlist] = useState([]);
+
   return (
     <>
-      <Button variant="primary">Primary</Button>
-      <p>Hello</p>
+      <FormGroup
+        producto={producto}
+        setproducto={setproducto}
+        list={list}
+        setlist={setlist}
+      />
+      <List list={list} />
     </>
   );
 }
