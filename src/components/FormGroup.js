@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 function FormGroup({ producto, setproducto, list, setlist }) {
   const handleChange = (e) => {
@@ -23,7 +24,11 @@ function FormGroup({ producto, setproducto, list, setlist }) {
           onChange={handleChange}
         />
       </Form.Group>
-      <button>Agregar</button>
+      <Form.Group className="mb-3" controlId="cantidad">
+        <Form.Label>Cantidad</Form.Label>
+        <Form.Control type="text" placeholder="Ingresa la cantidad " />
+      </Form.Group>
+      <Button variant="info">Agregar</Button>
     </Form>
   );
 }

@@ -8,6 +8,7 @@ export const List = ({ list }) => {
         <thead>
           <tr>
             <th>Producto</th>
+            <th>Cantidad</th>
             <th>Opciones</th>
           </tr>
         </thead>
