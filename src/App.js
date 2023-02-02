@@ -4,7 +4,7 @@ import FormGroup from "./components/FormGroup";
 import { List } from "./components/List";
 
 function App() {
-  const [producto, setproducto] = useState("");
+  const [producto, setproducto] = useState({ nombre: "", cantidad: 0 });
   const [list, setlist] = useState([]);
 
   return (

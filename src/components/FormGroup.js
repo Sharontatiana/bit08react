@@ -1,35 +1,35 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 
 function FormGroup({ producto, setproducto, list, setlist }) {
-  const handleChange = (e) => {
-    setproducto(e.target.value);
+  const handleProducto = (event) => {
+    const newobj = { nombre: event.target.value, cantidad: producto.cantidad };
+    setproducto(newobj);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(producto);
-    list([...list, producto]);
+  const handleCatidad = (event) => {
+    const newobj = { nombre: producto.nombre, cantidad: event.target.value };
+    setproducto(newobj);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setlist([...list, producto]);
+    console.log(list);
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Group className="mb-3" controlId="producto">
-        <Form.Label>Producto</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Ingresa el producto"
-          value={producto}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="cantidad">
-        <Form.Label>Cantidad</Form.Label>
-        <Form.Control type="text" placeholder="Ingresa la cantidad " />
-      </Form.Group>
-      <Button variant="info">Agregar</Button>
-    </Form>
+    <form className="mb-3" onSubmit={handleSubmit}>
+      <label>Producto</label>
+      <input
+        type="text"
+        placeholder="Ingresa el producto"
+        required
+        onChange={handleProducto}
+      />
+      <label>Cantidad</label>
+      <input type="number" placeholder="0" required onChange={handleCatidad} />
+      <button type="submit">Agregar</button>
+    </form>
   );
 }
 
