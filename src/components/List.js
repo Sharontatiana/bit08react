@@ -1,7 +1,16 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
+import { ListaItem } from "./ListaItem";
 
-export const List = ({ list }) => {
+export const List = ({ list, setlist }) => {
+  const listElemento = list.map((item, i) => (
+    <ListaItem
+      nombre={item.nombre}
+      cantidad={item.cantidad}
+      list={list}
+      setlist={setlist}
+    />
+  ));
   return (
     <>
       <Table striped="columns">
@@ -12,7 +21,7 @@ export const List = ({ list }) => {
             <th>Opciones</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>{listElemento}</tbody>
       </Table>
     </>
   );

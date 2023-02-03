@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import FormGroup from "./components/FormGroup";
 import { List } from "./components/List";
+import { ListaItem } from "./components/ListaItem";
 
 function App() {
   const [producto, setproducto] = useState({ nombre: "", cantidad: 0 });
@@ -15,7 +16,11 @@ function App() {
         list={list}
         setlist={setlist}
       />
-      <List list={list} />
+      <List list={list} setlist={setlist} />
+      <ListaItem
+        list={list}
+        setlist={setlist}
+      />
     </>
   );
 }
