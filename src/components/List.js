@@ -5,6 +5,7 @@ import { ListaItem } from "./ListaItem";
 export const List = ({ list, setlist }) => {
   const listElemento = list.map((item, i) => (
     <ListaItem
+      key={i}
       nombre={item.nombre}
       cantidad={item.cantidad}
       list={list}

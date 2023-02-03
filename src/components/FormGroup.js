@@ -1,5 +1,5 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 
 function FormGroup({ producto, setproducto, list, setlist }) {
   const handleProducto = (event) => {
@@ -15,6 +15,7 @@ function FormGroup({ producto, setproducto, list, setlist }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     setlist([...list, producto]);
+    setproducto({ nombre: "", cantidad: NaN });
   };
 
   return (
@@ -25,10 +26,19 @@ function FormGroup({ producto, setproducto, list, setlist }) {
         placeholder="Ingresa el producto"
         required
         onChange={handleProducto}
+        value={producto.nombre}
       />
       <label>Cantidad</label>
-      <input type="number" placeholder="0" required onChange={handleCatidad} />
-      <Button  type="submit" variant="dark">Agregar</Button>
+      <input
+        type="number"
+        required
+        placeholder="Ingresa la cantidad"
+        onChange={handleCatidad}
+        value={producto.cantidad}
+      />
+      <Button type="submit" variant="dark">
+        Agregar
+      </Button>
     </form>
   );
 }

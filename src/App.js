@@ -2,10 +2,9 @@ import "./App.css";
 import { useState } from "react";
 import FormGroup from "./components/FormGroup";
 import { List } from "./components/List";
-import { ListaItem } from "./components/ListaItem";
 
 function App() {
-  const [producto, setproducto] = useState({ nombre: "", cantidad: 0 });
+  const [producto, setproducto] = useState({ nombre: "", cantidad: NaN });
   const [list, setlist] = useState([]);
 
   return (
@@ -17,10 +16,6 @@ function App() {
         setlist={setlist}
       />
       <List list={list} setlist={setlist} />
-      <ListaItem
-        list={list}
-        setlist={setlist}
-      />
     </>
   );
 }
