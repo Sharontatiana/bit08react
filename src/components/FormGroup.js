@@ -49,43 +49,48 @@ function FormGroup({ producto, setproducto, list, setlist }) {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <label className="labelProducto">Codigo</label>
+      <label className="labelFormulario">Codigo</label>
       <input
-        className="inputCodigo"
+        className="inputFormulario"
         type="number"
-        placeholder="Ingresa el codigo del producto"
+        placeholder="Codigo del producto"
         required
         onChange={handleCodigo}
         value={producto.codigo}
       />
-      <label className="labelProducto">Producto</label>
+      <label className="labelFormulario">Producto</label>
       <input
-        className="inputProducto"
+        className="inputFormulario"
         type="text"
         placeholder="Ingresa el producto"
         required
         onChange={handleProducto}
         value={producto.nombre}
       />
-      <label className="labelCantidad">Cantidad</label>
+      <label className="labelFormulario">Cantidad</label>
       <input
-        className="inputCantidad"
+        className="inputFormulario"
         type="number"
         required
         placeholder="Ingresa la cantidad"
         onChange={handleCatidad}
         value={producto.cantidad}
       />
-      <label className="labelCantidad">Unidad Medida</label>
+      <label className="labelFormulario">Medida</label>
       <input
-        className="inputMedida"
+        className="inputFormulario"
         type="text"
         required
-        placeholder="Ingresa la unidad de Medida"
+        placeholder="Unidad de Medida"
         onChange={handleMedida}
         value={producto.medida}
       />
-      <Button className="btnAgregar" type="submit" variant="dark">
+      <Button
+        className="btnAgregar"
+        type="submit"
+        variant="secondary"
+        size="lg"
+      >
         Agregar
       </Button>
     </form>

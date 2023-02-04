@@ -19,80 +19,64 @@ body {
   height: 100%;
   margin: 0;
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
   color: #f9fadc;
+  text-transform: uppercase;
+  margin: 25px;
 }
 
 .form {
+  width: 100%;
   background: #301e1ac4;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  margin: 10px auto;
   text-align: center;
   color: aliceblue;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.labelProducto {
+.labelFormulario {
+  margin-top: 5px;
   font-size: 20px;
-  margin: 10px;
   font-family: cursive;
   font-style: inherit;
 }
 
-.inputProducto {
+.inputFormulario {
   border: 0;
-  border-radius: 20px;
-  background: #f9fadc;
-  margin: 25px auto;
+  background: none;
+  border-bottom: 1px solid #e3dfba;
+  margin: 5px 25px auto;
   padding: 5px 10px;
   text-align: center;
-  color: #301e1a;
+  color: #f7f7f7;
   font-size: 15px;
 }
 
-.inputProducto:hover {
-  box-shadow: 0 0 10px #ff9c5b;
+.inputFormulario::placeholder {
+  color: #e4cab296;
 }
-
-.inputProducto:focus {
-  outline: none;
-}
-
-.labelCantidad {
-  font-size: 20px;
-  margin: 10px;
-  font-family: cursive;
-  font-style: inherit;
-}
-
-.inputCantidad {
-  border: 0;
+.inputFormulario:hover {
   border-radius: 20px;
-  color: #301e1a;
-  background: #f9fadc;
-  margin: 25px auto;
-  padding: 5px 10px;
-  text-align: center;
-  font-size: 15px;
+  box-shadow: 0 0 10px #b7833adc;
 }
 
-.inputCantidad:hover {
-  box-shadow: 0 0 10px #ff9c5b;
-}
-
-.inputCantidad:focus {
+.inputFormulario:focus {
   outline: none;
 }
 
 .btnAgregar {
-  font-size: medium;
+  font-size: 15px;
   display: block;
-  margin-right: auto;
   margin-left: auto;
-  margin-top: 5px;
+  margin-right: auto;
+  margin-top: 10px;
   margin-bottom: 15px;
   border-radius: 20px;
   font-family: cursive;
@@ -103,8 +87,9 @@ h1 {
 }
 
 .table thead {
+  font-size: 15px;
+  text-align: center;
   background-color: #a04a269a;
-  font-size: 13px;
   color: #e3dfba;
   font-family: cursive;
   border-bottom: 2px solid #c2b79b;
@@ -115,14 +100,19 @@ thead .thCantidad {
 }
 
 tbody {
+  margin: 0 auto;
+  width: 60%;
   background-color: #d5a67fe0;
   font-size: 15px;
   font-family: cursive;
 }
+.tdCodigo {
+  width: 20px;
+}
 
 .inputEdit {
   border: 0;
-  border-radius: 10px;
+  border-radius: 2px;
   padding: 1px;
   width: 100px;
   text-align: center;
@@ -134,4 +124,37 @@ tbody {
 
 .inputEdit:focus {
   outline: none;
+}
+.btn {
+  margin-bottom: 5px;
+}
+.bi {
+  font-size: 15px;
+}
+
+@media (max-width: 400px) {
+  .table {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .inputEdit {
+    border: 0;
+    padding: 1px;
+    width: 50px;
+    text-align: center;
+  }
+
+  .table thead {
+    font-size: 13px;
+  }
+
+  tbody {
+    font-size: 12px;
+  }
+
+
+  .bi {
+    font-size: 10px;
+  }
 }

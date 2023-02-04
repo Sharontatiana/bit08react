@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-    <h1> Te damos la Bienvenida a tu Catalogo de Productos </h1>
+    <h1> Te damos la Bienvenida a tu inventarios de Productos </h1>
       <FormGroup
         producto={producto}
         setproducto={setproducto}

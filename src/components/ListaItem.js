@@ -52,9 +52,9 @@ export const ListaItem = ({
   if (editItem.nombre === nombre) {
     return (
       <tr>
-        <td>
+        <td className="tdCodigo">
           <input
-            className="inputEdit"
+            className="inputEdit "
             type="number"
             value={newCodigo}
             id="codigo-input"
@@ -72,7 +72,7 @@ export const ListaItem = ({
         </td>
         <td>
           <input
-            className="inputEdit"
+            className="inputEdit "
             type="number"
             value={newCantidad}
             id="cantidad-input"
@@ -89,10 +89,10 @@ export const ListaItem = ({
           />
         </td>
         <td>
-          <Button variant="success" onClick={handleGuardar}>
+          <Button className="btn" variant="success" onClick={handleGuardar}>
             <i className="bi bi-check2-square"></i>
           </Button>{" "}
-          <Button variant="danger" onClick={handleCancel}>
+          <Button className="btn" variant="danger" onClick={handleCancel}>
             <i className="bi bi-x-square"></i>
           </Button>{" "}
         </td>
@@ -103,15 +103,15 @@ export const ListaItem = ({
   return (
     <>
       <tr>
-        <td>{codigo}</td>
+        <td className="tdCodigo">{codigo}</td>
         <td>{nombre}</td>
         <td className="cantidadTd">{cantidad}</td>
         <td>{medida}</td>
         <td>
-          <Button variant="outline-danger" onClick={handleEliminar}>
+          <Button className="btn" variant="outline-danger" onClick={handleEliminar}>
             <i className="bi bi-trash3-fill"></i>
-          </Button>{" "}
-          <Button
+          </Button>{"  "}
+          <Button className="btn"
             variant="outline-primary"
             onClick={() => handleEdit({ nombre, cantidad })}
           >

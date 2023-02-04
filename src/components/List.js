@@ -32,7 +32,7 @@ export const List = ({ list, setlist }) => {
       <Table className="table">
         <thead>
           <tr>
-            <th>Codigo</th>
+            <th className="tdCodigo">#</th>
             <th className="thCantidad">Producto</th>
             <th>Cantidad</th>
             <th className="thCantidad">UI Medida</th>
