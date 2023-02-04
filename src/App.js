@@ -6,7 +6,7 @@ import { List } from "./components/List";
 function App() {
   const [producto, setproducto] = useState({
     nombre: "",
-    cantidad: 0,
+    cantidad: "",
   });
   const [list, setlist] = useState([]);
 

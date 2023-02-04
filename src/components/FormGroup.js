@@ -21,7 +21,7 @@ function FormGroup({ producto, setproducto, list, setlist }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     setlist([...list, producto]);
-    setproducto({ nombre: "", cantidad: 0 });
+    setproducto({ nombre: "", cantidad: "" });
   };
 
   return (

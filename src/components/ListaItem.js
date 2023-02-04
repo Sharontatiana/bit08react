@@ -21,6 +21,23 @@ export const ListaItem = ({
     setEditItem(item);
   };
 
+  const handleGuardar = () => {
+    const updatedList = list.map((item) => {
+      if (item.nombre === nombre) {
+        return { nombre: newNombre, cantidad: newCantidad };
+      }
+      return item;
+    });
+    setlist(updatedList);
+    setEditItem({});
+  };
+
+  const handleCancel = () => {
+    setnewNombre(nombre);
+    setnewCantidad(cantidad);
+    setEditItem({});
+  };
+
   if (editItem.nombre === nombre) {
     return (
       <tr>
@@ -41,10 +58,10 @@ export const ListaItem = ({
           />
         </td>
         <td>
-          <Button variant="warning">
+          <Button variant="warning" onClick={handleGuardar}>
             <i className="bi bi-check2-square"></i>
           </Button>{" "}
-          <Button variant="danger">
+          <Button variant="danger" onClick={handleCancel}>
             <i className="bi bi-x-square"></i>
           </Button>{" "}
         </td>
