@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/bit08react/static/css/main.a6adb37f.css",
-    "main.js": "/bit08react/static/js/main.1d1ffaa4.js",
+    "main.js": "/bit08react/static/js/main.8cf11f7d.js",
     "static/js/787.673cccc8.chunk.js": "/bit08react/static/js/787.673cccc8.chunk.js",
     "static/media/fondo.jpg": "/bit08react/static/media/fondo.3716a9037e480b9abea5.jpg",
     "static/media/bootstrap-icons.woff?": "/bit08react/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
     "static/media/bootstrap-icons.woff2?": "/bit08react/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
     "index.html": "/bit08react/index.html",
     "main.a6adb37f.css.map": "/bit08react/static/css/main.a6adb37f.css.map",
-    "main.1d1ffaa4.js.map": "/bit08react/static/js/main.1d1ffaa4.js.map",
+    "main.8cf11f7d.js.map": "/bit08react/static/js/main.8cf11f7d.js.map",
     "787.673cccc8.chunk.js.map": "/bit08react/static/js/787.673cccc8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a6adb37f.css",
-    "static/js/main.1d1ffaa4.js"
+    "static/js/main.8cf11f7d.js"
   ]
 }
