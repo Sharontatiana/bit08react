@@ -9,8 +9,10 @@ export const List = ({ list, setlist }) => {
   const listElemento = list.map((item, i) => (
     <ListaItem
       key={i}
+      codigo={item.codigo}
       nombre={item.nombre}
       cantidad={item.cantidad}
+      medida={item.medida}
       list={list}
       setlist={setlist}
       handleDelete={() => handleDelete(i)}
@@ -30,8 +32,10 @@ export const List = ({ list, setlist }) => {
       <Table className="table">
         <thead>
           <tr>
-            <th>Producto</th>
-            <th className="thCantidad">Cantidad</th>
+            <th>Codigo</th>
+            <th className="thCantidad">Producto</th>
+            <th>Cantidad</th>
+            <th className="thCantidad">UI Medida</th>
             <th>Opciones</th>
           </tr>
         </thead>
