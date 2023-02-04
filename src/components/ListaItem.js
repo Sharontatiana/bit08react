@@ -43,6 +43,7 @@ export const ListaItem = ({
       <tr>
         <td>
           <input
+            className="inputEdit"
             type="text"
             value={newNombre}
             id="nombre-input"
@@ -51,6 +52,7 @@ export const ListaItem = ({
         </td>
         <td>
           <input
+            className="inputEdit"
             type="number"
             value={newCantidad}
             id="cantidad-input"
@@ -58,7 +60,7 @@ export const ListaItem = ({
           />
         </td>
         <td>
-          <Button variant="warning" onClick={handleGuardar}>
+          <Button variant="success" onClick={handleGuardar}>
             <i className="bi bi-check2-square"></i>
           </Button>{" "}
           <Button variant="danger" onClick={handleCancel}>
@@ -73,7 +75,7 @@ export const ListaItem = ({
     <>
       <tr>
         <td>{nombre}</td>
-        <td>{cantidad}</td>
+        <td className="cantidadTd">{cantidad}</td>
         <td>
           <Button variant="outline-danger" onClick={handleEliminar}>
             <i className="bi bi-trash3-fill"></i>

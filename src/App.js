@@ -12,6 +12,7 @@ function App() {
 
   return (
     <>
+    <h1>Hola.. </h1>
       <FormGroup
         producto={producto}
         setproducto={setproducto}

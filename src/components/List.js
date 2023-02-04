@@ -4,7 +4,6 @@ import { ListaItem } from "./ListaItem";
 import Table from "react-bootstrap/Table";
 
 export const List = ({ list, setlist }) => {
-
   const [editItem, setEditItem] = useState({});
 
   const listElemento = list.map((item, i) => (
@@ -19,7 +18,7 @@ export const List = ({ list, setlist }) => {
       setEditItem={setEditItem}
     />
   ));
-  
+
   const handleDelete = (index) => {
     const newobj = [...list];
     newobj.splice(index, 1);
@@ -28,11 +27,11 @@ export const List = ({ list, setlist }) => {
 
   return (
     <>
-      <Table striped="columns">
+      <Table className="table">
         <thead>
           <tr>
             <th>Producto</th>
-            <th>Cantidad</th>
+            <th className="thCantidad">Cantidad</th>
             <th>Opciones</th>
           </tr>
         </thead>
