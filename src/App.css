@@ -1,1 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 2rem;
+}
 
+.form {
+  font-size: medium;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.labelProducto {
+  font-size: 15px;
+  margin: 10px;
+}
+.inputProducto {
+  border: 0;
+  background: none;
+  margin: 25px auto;
+  padding: 5px 20px;
+  text-align: center;
+  border-bottom: 1px solid purple;
+}
+.labelCantidad {
+  font-size: 15px;
+  margin: 10px;
+}
+
+.inputCantidad {
+  border: 0;
+  background: none;
+  margin: 25px auto;
+  padding: 5px 20px;
+  text-align: center;
+  border-bottom: 1px solid purple;
+}
+
+.btnAgregar {
+  font-size: medium;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
